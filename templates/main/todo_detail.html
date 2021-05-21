@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <article class="todo">
+        <aside class="actions">
+            <a class="btn btn-default" href="{% url 'todo_edit' pk=todo.pk %}">
+                
+            </a>
+        </aside>
+        {% if todo.created_date %}
+            <time class="date">
+                {{ todo.created_date }}
+            </time>
+        {% endif %}
+        <h2>{{ todo.text }}</h2>
+    </article>
+{% endblock %}

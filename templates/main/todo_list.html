@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href= "{% url 'todo_new' %}" class="top-menu">
+    {% include './icons/file-earmark-plus (1).svg' %}
+</a>
+    {% for todo in todos.all %}
+    
+        <article class="todo">
+            <time class="date">
+                {{ todo.due_date }}
+            </time>
+            <h2><a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.text }}</a></h2>
+            <p>{{ todo.user|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}
