@@ -12,6 +12,7 @@
     color: #f8fafc;
     font-size: 36pt;
     text-decoration: none;
+     
 }
 
 h1,
@@ -64,6 +65,7 @@ h4 {
     color: #64055f;
     background: #828282;
     border-color: #64055f;
+    float: right
 }
 
 .btn-default:hover {
@@ -71,3 +73,4 @@ h4 {
     background-color: #7a0a71;
     
 }
+

@@ -10,7 +10,7 @@ def homepage(request):
     return render(request, 'main/mytodos.html', {'todos': todos})
 
 def todo_list(request):
-    todos = Todo.objects.all()
+    todos = Todo.objects.all().order_by('-user', 'due_date')
     return render(request, 'main/todo_list.html', {'todos': todos})
 
 def todo_detail(request, pk):
@@ -22,7 +22,7 @@ def todo_new(request):
         form = TodoForm(request.POST)
         if form.is_valid():
             todo = form.save(commit=False)
-            todo.user = request.user
+            # todo.user = request.user
             todo.published_date = timezone.now()
             todo.save()
             return redirect('todo_detail', pk=todo.pk)
@@ -37,7 +37,7 @@ def todo_edit(request, pk):
     
         if form.is_valid():
             todo = form.save(commit=False)
-            todo.user = request.user
+            # todo.user = request.user
             todo.created_date = timezone.now()
             todo.save()
             return redirect('todo_detail', pk=todo.pk)

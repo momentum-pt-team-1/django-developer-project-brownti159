@@ -7,10 +7,13 @@
 
     {% for todo in todos.all %}
         <article class="todo">
-
+            
             <h2><a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.task }}</a></h2>
             <h3>{{ todo.user |linebreaksbr }} </h3>
-            <p>{{ todo.due_date|linebreaksbr }}</p>
+            <p>Complete by:{{ todo.due_date|linebreaksbr }}</p>
+            
+            
+              
         </article>
     {% endfor %}
 {% endblock %}
