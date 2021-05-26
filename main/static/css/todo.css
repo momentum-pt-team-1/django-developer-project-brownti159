@@ -19,6 +19,7 @@ h2,
 h3,
 h4 {
     font-family: DejaVu Sans Mono, monospace;
+    color: #063453
 }
 
 .date {
@@ -38,8 +39,8 @@ h4 {
 .top-menu:hover,
 .top-menu:visited {
     color: #ffffff;
-    float: right;
-    font-size: 26pt;
+    float: center;
+    font-size: 30pt;
     margin-right: 20px;
 }
 
@@ -49,7 +50,7 @@ h4 {
 
 .post h2 a,
 .post h2 a:visited {
-    color: #f5f8fa;
+    color: #063453;
     background-color: #828282;
 }
 
@@ -60,12 +61,13 @@ h4 {
 
 .btn-default,
 .btn-default:visited {
-    color: #e63946;
-    background: none;
-    border-color: #C25100;
+    color: #64055f;
+    background: #828282;
+    border-color: #64055f;
 }
 
 .btn-default:hover {
-    color: #FFFFFF;
-    background-color: #aa1608;
+    color: #630954;
+    background-color: #7a0a71;
+    
 }

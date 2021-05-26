@@ -8,10 +8,12 @@
             </a>
         </aside>
         {% if todo.created_date %}
-            <time class="date">
-                {{ todo.created_date }}
-            </time>
         {% endif %}
-        <h2>{{ todo.text }}</h2>
+        <h2>{{ todo.task }}</h2>
+        <h3>{{ todo.user }}</h3>
+        <p>{{ todo.text }}</p>
+        <time class="date">
+            {{ todo.created_date }}
+        </time>
     </article>
 {% endblock %}

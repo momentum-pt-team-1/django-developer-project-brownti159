@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
+
+
+
     {% for todo in todos.all %}
         <article class="todo">
-            <time class="date">
-                {{ todo.created_date }}
-            </time>
-            <h2><a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.text }}</a></h2>
+
+            <h2><a href="{% url 'todo_detail' pk=todo.pk %}">{{ todo.task }}</a></h2>
+            <h3>{{ todo.user |linebreaksbr }} </h3>
             <p>{{ todo.due_date|linebreaksbr }}</p>
-        </articl{e>
+        </article>
     {% endfor %}
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Todo
+from .models import Todo, User
 from .forms import TodoForm
 
 
@@ -37,10 +37,12 @@ def todo_edit(request, pk):
     
         if form.is_valid():
             todo = form.save(commit=False)
-            # todo.user = request.user
+            todo.user = request.user
             todo.created_date = timezone.now()
             todo.save()
             return redirect('todo_detail', pk=todo.pk)
     else:
         form = TodoForm(instance=todo)
     return render(request, 'main/todo_edit.html', {'form': form})
+
+
