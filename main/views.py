@@ -45,4 +45,9 @@ def todo_edit(request, pk):
         form = TodoForm(instance=todo)
     return render(request, 'main/todo_edit.html', {'form': form})
 
+def todo_user(request):
+    todos= Todo.objects.filter(user__id=request.user.id)
+    return render(request, 'main/todo_list.html', {'todos': todos})
+
+
 
