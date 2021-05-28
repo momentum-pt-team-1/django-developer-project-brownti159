@@ -10,7 +10,7 @@ As a user, I want to mark a TODO as done on my TODOS list page so that I can tra
 
 As a User, I'd like to see all TODOS organized by their owner on the homepage, so that I can see what my family/team/organization is up to.
 
-[]  Separate TODOS by user
+[c]  Separate TODOS by user
 []  Render the separated TODOS in an appealing way
 
 As a User, I want to see an appealing interface, so that I enjoy using the app.
@@ -23,6 +23,6 @@ As a User, I want to see an appealing interface, so that I enjoy using the app.
 
 As a user, I want to be able to visit a page to see the TODOS I own, so that I can track my progress.
 
-[]  url for this new page
-[] view for this new page
-[]  require that a user be logged in to see this page
+[c]  url for this new page
+[c] view for this new page
+[c]  require that a user be logged in to see this page

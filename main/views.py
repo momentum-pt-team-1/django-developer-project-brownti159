@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Todo, User
+from .models import Todo 
 from .forms import TodoForm
 
 
@@ -49,5 +49,7 @@ def todo_user(request):
     todos= Todo.objects.filter(user__id=request.user.id)
     return render(request, 'main/todo_list.html', {'todos': todos})
 
-
+def todo_done(request):
+    todos= Todo.objects.filter(user__id=request.user.id)
+    return render(request, 'main/todo_done.html', {'todos': todos})
 
